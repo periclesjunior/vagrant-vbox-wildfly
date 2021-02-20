@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
   config.vm.define :node do |node|
-    node.vm.hostname = "vm-ubuntu10"
+    node.vm.hostname = "vm-ubuntu20"
     node.vm.synced_folder "./shared", "/opt/vagrant/data"
     node.vm.box = "ubuntu/focal64"
     node.vm.network "private_network", ip: "192.168.122.253"
