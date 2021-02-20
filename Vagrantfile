@@ -1,10 +1,9 @@
 Vagrant.configure("2") do |config|
 
   config.vm.define :node do |node|
-    node.vm.hostname = "vm-debian10"
-    node.vm.synced_folder ".", "/vagrant", disabled: true
+    node.vm.hostname = "vm-ubuntu10"
     node.vm.synced_folder "./shared", "/opt/vagrant/data"
-    node.vm.box = "debian/buster64"
+    node.vm.box = "ubuntu/focal64"
     node.vm.network "private_network", ip: "192.168.122.253"
     node.vm.provider :virtualbox do |vbox|
       vbox.memory = 2048
